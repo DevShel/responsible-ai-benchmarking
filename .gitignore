@@ -1,0 +1,7 @@
+src/gemma3-1b/env_py310
+src/gemma3-1b/gemma3_model
+src/gemma3-1b/gemma3_stereoset_results_analysis.json
+src/gemma3-1b/gemma3_stereoset_results.csv
+src/gemma3-1b/stereoset_bias_analysis.png
+.DS_Store
+src/gemma3-1b/stereoset_dev.json

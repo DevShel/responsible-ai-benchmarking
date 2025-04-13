@@ -2,8 +2,6 @@
 
 **Evaluating Gemma LLMs on Fairness, Robustness, Misinformation, and Interpretability Benchmarks**
 
-This project provides a reproducible, open-source framework for evaluating the Gemma family of language models (including 1B, 4B, 12B, 27B sizes, and optionally ShieldGemma 2) using cutting-edge Responsible AI (RA) benchmarks. The evaluation spans four key dimensions: **Fairness**, **Robustness**, **Misinformation**, and **Interpretability** (focused on English).
-
 ---
 
 ## Table of Contents
@@ -12,11 +10,8 @@ This project provides a reproducible, open-source framework for evaluating the G
 - [Project Goals](#project-goals)
 - [Repository Structure](#repository-structure)
 - [Setup & Installation](#setup--installation)
-- [Usage](#usage)
 - [Benchmarks & Evaluation](#benchmarks--evaluation)
 - [Results & Analysis](#results--analysis)
-- [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 - [To Be Completed](#to-be-completed)
 
@@ -24,7 +19,7 @@ This project provides a reproducible, open-source framework for evaluating the G
 
 ## Overview
 
-This project provides a reproducible, open-source framework for evaluating the Gemma family of language models (including 1B, 4B, 12B, 27B sizes, and optionally ShieldGemma 2) using cutting-edge Responsible AI (RA) benchmarks.
+This project provides a reproducible, open-source framework for evaluating the Gemma family of language models (including 1B, 4B, 12B, 27B sizes, and optionally ShieldGemma 2) using cutting-edge Responsible AI (RA) benchmarks. The evaluation spans four key dimensions: **Fairness**, **Robustness**, **Misinformation**, and **Interpretability** (focused on English).
 
 ---
 
@@ -40,71 +35,63 @@ Assess Gemma LLMs on:
 
 ## Repository Structure
 
-*To be completed: will be updating this section as the repository evolves*
-
+```
+responsible-ai-benchmarking/
+    ├── README.MD
+    ├── src # Main code repository
+        └── gemma3-1b/    # Gemma3 1B folder
+            ├── [Files to run gemma3-1b evaluations]
+```
 ---
 
 ## Setup & Installation
 
 1. **Clone the repository:**
-    
-    *To be completed*
-    
-2. **Create a virtual environment:**
-    
-    *To be completed*
-    
-3. **Install required packages:**
-    
-    *To be completed*
-    
-4. **Download necessary datasets and model checkpoints:** 
 
-    *To be completed*
+   ```bash
+   git clone https://github.com/DevShel/responsible-ai-benchmarking
+   ```
 
----
-
-## Usage
-
-### Running Evaluations
-
-*To be completed*
-
+2. **Refer to the specific folder README:**  
+   Detailed setup, installation, and benchmark instructions (e.g., for Gemma3 1B StereoSet) are provided in each model folder (e.g., `src/gemma3-1b/README.md`).
 ---
 
 ## Benchmarks & Evaluation
 
-*To be completed*
+### Fairness
+
+- **StereoSet**: Measures stereotypical biases in language models across gender, race, religion, and profession domains.
+  - **Metrics**: Language Modeling Score (LMS), Stereotype Score (SS), ICAT Score
+
+*More benchmarks will be added soon*
 
 ---
 
 ## Results & Analysis
 
-*To be completed*
+### Gemma3 1B StereoSet Evaluation
 
----
+The Gemma3 1B model demonstrates balanced performance on the StereoSet bias benchmark with 200 examples evaluated. The analysis reveals a nearly perfect overall Stereotype Score of 0.497 (with 0.5 being ideal), indicating minimal overall bias in the model's preferences between stereotypical and anti-stereotypical statements. 
 
-## Contributing
+The model achieved a strong Language Modeling Score of 0.815, showing its ability to distinguish contextually relevant completions from unrelated ones. This resulted in a high ICAT Score of 81.0, reflecting the model's ability to maintain language understanding while minimizing bias.
 
-*To be completed*
+When examining bias across different domains:
+- **Religion** showed the strongest anti-stereotype tendency (0.429)
+- **Race** demonstrated slight anti-stereotype preference (0.462)
+- **Profession** exhibited mild stereotype bias (0.545)
+- **Gender** displayed the strongest stereotype bias (0.563)
 
----
-
-## License
-
-*To be completed*
+The results suggest that while Gemma3 1B performs remarkably well overall, targeted bias mitigation efforts could focus on gender and profession domains where stereotype preferences are more pronounced. The model's balanced performance across the religion and race categories indicates existing bias mitigation techniques are effective in these areas.
 
 ---
 
 ## Acknowledgements
 
-*To be completed*
+I gratefully acknowledge the contributions of the StereoSet paper and its authors, whose work has provided a foundational framework for bias evaluation in language models.
 
 ---
 
 ## To Be Completed
 
+- More model evaluations
 - Extended documentation.
-- Detailed benchmarks descriptions and metric definitions.
-- Additional tutorials and examples.
-- Analysis and report of findings.
