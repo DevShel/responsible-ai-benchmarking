@@ -19,7 +19,7 @@
 
 ## Overview
 
-This project provides a reproducible, open-source framework for evaluating the Gemma family of language models (including 1B, 4B, 12B, 27B sizes, and optionally ShieldGemma 2) using cutting-edge Responsible AI (RA) benchmarks. The evaluation spans four key dimensions: **Fairness**, **Robustness**, **Misinformation**, and **Interpretability** (focused on English).
+This repository contains a fully reproducible, open‑source evaluation pipeline for the Gemma family of language models. We run the models through a curated suite of Responsible‑AI benchmarks—covering fairness, toxicity, privacy, and more—that, to date, have not been published for Gemma. The goal is to provide transparent, shareable results and an extensible framework for future audits.
 
 ---
 
