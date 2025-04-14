@@ -1,0 +1,181 @@
+python analyze_anli_results.py --show_examples:
+
+================================================================================
+ANLI EVALUATION SUMMARY
+================================================================================
+Total examples: 300
+Correct predictions: 102 (34.0%)
+Baselines: Random 33.3%, Majority 38.0%
+
+Class-wise Performance:
+
+  ENTAILMENT:
+    Support: 98 examples
+    Precision: 0.339
+    Recall: 0.643
+    F1 Score: 0.444
+
+  NEUTRAL:
+    Support: 88 examples
+    Precision: 0.300
+    Recall: 0.136
+    F1 Score: 0.187
+
+  CONTRADICTION:
+    Support: 114 examples
+    Precision: 0.365
+    Recall: 0.237
+    F1 Score: 0.287
+
+Performance by Round:
+
+  ROUND_1:
+    Examples: 114
+    Accuracy: 0.316 (31.6%)
+
+  ROUND_2:
+    Examples: 94
+    Accuracy: 0.351 (35.1%)
+
+  ROUND_3:
+    Examples: 92
+    Accuracy: 0.359 (35.9%)
+
+================================================================================
+Overall accuracy plot saved to anli_analysis/overall_accuracy.png
+Confusion matrix plot saved to anli_analysis/confusion_matrix.png
+Normalized confusion matrix plot saved to anli_analysis/confusion_matrix_normalized.png
+Round comparison plot saved to anli_analysis/round_comparison.png
+Class metrics plot saved to anli_analysis/class_metrics.png
+Response quality plot saved to anli_analysis/response_quality.png
+Response patterns saved to anli_analysis/response_patterns.json
+
+
+================================================================================
+EXAMPLE PREDICTIONS
+================================================================================
+
+CORRECT PREDICTIONS:
+
+ENTAILMENT (correctly classified):
+
+Example 1:
+Premise: Annie Gariepy (born May 12, 1975 in Bromont, Québec) is a female member of the Canadian cycling team...
+Hypothesis: Gariepy was on a team with non-Canadians
+Model's response: entailment
+
+Example 2:
+Premise: Amy Timberlake is the author of three children’s books: "One Came Home", "That Girl Lucy Moon", and ...
+Hypothesis: Both parents and children love Amy Timberlake's books.
+Model's response: entailment
+
+Example 3:
+Premise: Mützig is a beer brand owned by Heineken and its subsidiaries, and was originally brewed in 1810 by ...
+Hypothesis: Mützig has existed for over 200 years
+Model's response: entailment
+
+NEUTRAL (correctly classified):
+
+Example 1:
+Premise: Deus (styled as dEUS) is a rock band based in Antwerp, Belgium, whose only continuous members up to ...
+Hypothesis: Rock bands can be found across the entire world, no matter which country you are in
+Model's response: neutral
+
+Example 2:
+Premise: Bugger or "buggar" is a slang word. In the United Kingdom, the term is a general-purpose expletive, ...
+Hypothesis: Bugger is a term used in every country.
+Model's response: neutral
+
+Example 3:
+Premise: Anna Katharina Wienhard (born 1977) is a German mathematician whose research concerns differential g...
+Hypothesis: anna is a taurus
+Model's response: neutral
+
+CONTRADICTION (correctly classified):
+
+Example 1:
+Premise: Interim Palestinian leader, Mahmoud Abbas, has won a landslide victory in Sunday's presidential elec...
+Hypothesis: Yasser Arafat was the loser.
+Model's response: contradiction
+
+Example 2:
+Premise: The Centralia Massacre was an incident during the American Civil War in which twenty-four unarmed Un...
+Hypothesis: The Centralia Massacre was the execution of 25 Union soldiers during the American Civil War.
+Model's response: contradiction
+
+Example 3:
+Premise: Last Flight is a book published in 1937 consisting of diary entries and other notes compiled by avia...
+Hypothesis: Amelia Earhart's husband was on the plane with her when it crashed.
+Model's response: contradiction
+
+
+INCORRECT PREDICTIONS:
+
+ENTAILMENT (incorrectly classified):
+
+Example 1:
+Premise: WJMF-LP is a low-power television station in Jackson, Mississippi. The station, which currently oper...
+Hypothesis: WJMF-LP is in the Northern Hemisphere of the globe
+True label: entailment
+Predicted label: neutral
+Model's response: neutral
+
+Example 2:
+Premise: Hoang Anh Gia Lai – Arsenal JMG Academy is a football academy in Pleiku, Gia Lai Province, Tay Nguye...
+Hypothesis: Hoang Anh Gia Lai is in the northern hemisphere
+True label: entailment
+Predicted label: neutral
+Model's response: neutral
+
+Example 3:
+Premise: For one night, all of Clinton's non-varsity squads achieved perfection sweeping Altus in seventh, ei...
+Hypothesis: This headline leads to more information that is behind a paywall.
+True label: entailment
+Predicted label: contradiction
+Model's response: contradiction
+
+NEUTRAL (incorrectly classified):
+
+Example 1:
+Premise: The East Broad Top Railroad and Coal Company (EBT) is a for-profit, narrow gauge historic railroad h...
+Hypothesis: The East Broad Top Railroad and Coal Company went bankrupt in 2009.
+True label: neutral
+Predicted label: contradiction
+Model's response: contradiction
+
+Example 2:
+Premise: Kaalamellam Kaathiruppen (Tamil: காலமெல்லாம் காத்திருப்பேன் ; English: I Will Wait Forever ) is 1997...
+Hypothesis: Kaalamellam Kaathiruppen was finished in 1997
+True label: neutral
+Predicted label: entailment
+Model's response: entailment
+
+Example 3:
+Premise: John Christian Hopkins (born 1960) is a Narragansett journalist, author, poet and public speaker who...
+Hypothesis: John Christian Hopkins didn't go to school in 1988. 
+True label: neutral
+Predicted label: contradiction
+Model's response: contradiction
+
+CONTRADICTION (incorrectly classified):
+
+Example 1:
+Premise: Missed Flight<br>Sheila set of for the airport early so she could catch her flight. On the way her c...
+Hypothesis: Sheila was going to drive to her destination
+True label: contradiction
+Predicted label: entailment
+Model's response: entailment
+
+Example 2:
+Premise: Die Hochzeit des Camacho ("Comacho's Wedding") is a Singspiel in two acts by Felix Mendelssohn, to a...
+Hypothesis:  first performed publicly at the Singspiel Schauspielhaus on 29 April 1827
+True label: contradiction
+Predicted label: entailment
+Model's response: entailment
+
+Example 3:
+Premise: OD<br>My wife's nephew had drug addiction problems for years. He was on methadone, trying to recover...
+Hypothesis: His wife was addicted to drugs
+True label: contradiction
+Predicted label: entailment
+Model's response: entailment
