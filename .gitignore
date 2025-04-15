@@ -1,7 +1,19 @@
-src/gemma3-1b/env_py310
-src/gemma3-1b/gemma3_model
-src/gemma3-1b/gemma3_stereoset_results_analysis.json
-src/gemma3-1b/gemma3_stereoset_results.csv
-src/gemma3-1b/stereoset_bias_analysis.png
+# ANLI
+src/gemma3-1b/anli/env_py310
+src/gemma3-1b/anli/anly_analysis
+src/gemma3-1b/anli/gemma3_model
+src/gemma3-1b/anli/gemma3_anli_results_analysis.json
+src/gemma3-1b/anli/gemma3_anli_results.csv
+src/gemma3-1b/anli/anli_analysis
+
+
+# Stereoset
+src/gemma3-1b/stereoset/env_py310
+src/gemma3-1b/stereoset/gemma3_model
+src/gemma3-1b/stereoset/gemma3_stereoset_results_analysis.json
+src/gemma3-1b/stereoset/gemma3_stereoset_results.csv
+src/gemma3-1b/stereoset/stereoset_bias_analysis.png
+src/gemma3-1b/stereoset/stereoset_dev.json
+
+# General
 .DS_Store
-src/gemma3-1b/stereoset_dev.json
