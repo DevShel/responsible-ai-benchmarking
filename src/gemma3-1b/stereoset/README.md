@@ -150,8 +150,6 @@ python analyze_stereoset_results.py --csv gemma3_stereoset_results.csv --top_n 3
 
 ## Citation
 
-If you use StereoSet in your work, please cite the original paper:
-
 ```bibtex
 @misc{nadeem2020stereoset,
     title={StereoSet: Measuring stereotypical bias in pretrained language models},
